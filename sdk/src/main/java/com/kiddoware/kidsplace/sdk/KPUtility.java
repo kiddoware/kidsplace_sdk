@@ -21,6 +21,8 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 /**
  * Utility class for 3rd party apps to integrate with Kids Place
@@ -1031,14 +1033,22 @@ public class KPUtility {
 
 	private static void showKPInstallDialog(final Activity activity, boolean upgrade) {
 		final AlertDialog.Builder builder = new AlertDialog.Builder(activity);
-		if(upgrade){
-			builder.setTitle(getString(KIDSPLACE_UPGRADE_TITLE));
-			builder.setMessage(getString(KIDSPLACE_UPGRADE_MSG));			
-		}
-		else {
-			builder.setTitle(getString(KIDSPLACE_INSTALL_TITLE));
-			builder.setMessage(getString(KIDSPLACE_INSTALL_MSG));
-		}
+
+		View view = activity.getLayoutInflater().inflate(R.layout.install_dialog,null,false);
+
+        TextView title = (TextView) view.findViewById(android.R.id.text1);
+        TextView description = (TextView) view.findViewById(android.R.id.text2);
+
+        if (upgrade) {
+            title.setText(getString(KIDSPLACE_UPGRADE_TITLE));
+            description.setText(getString(KIDSPLACE_UPGRADE_MSG));
+        } else {
+            title.setText(getString(KIDSPLACE_INSTALL_TITLE));
+            description.setText(getString(KIDSPLACE_INSTALL_MSG));
+        }
+
+        builder.setView(view);
+
 		builder.setCancelable(true);
 		builder.setPositiveButton(getString(KIDSPLACE_OK),
 				new DialogInterface.OnClickListener() {
