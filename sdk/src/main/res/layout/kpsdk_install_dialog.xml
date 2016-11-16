@@ -12,11 +12,11 @@
         android:layout_alignParentTop="true"
         android:orientation="horizontal">
 
-        <ImageView
+        <com.kiddoware.kidsplace.sdk.view.CircularBackImageView
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center_vertical"
-            android:src="@android:drawable/btn_star_big_on" />
+            android:src="@drawable/ic_launcher_home" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,6 +42,7 @@
         </LinearLayout>
 
     </LinearLayout>
+
 
     <TextView
         android:id="@android:id/text2"

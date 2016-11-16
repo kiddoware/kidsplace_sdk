@@ -4,11 +4,10 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:supportsRtl="true">
 
         <activity
-            android:name=".app.BasicSetupActivity"
+            android:name=".app.MainActivity"
             android:theme="@style/Theme.AppCompat.Light"
             android:label="@string/app_name" >
             <intent-filter>
@@ -16,6 +15,12 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".app.CustomUI"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:label="@string/app_name" >
         </activity>
 
     </application>

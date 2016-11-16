@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/launch_btn_enable_lock"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/accent_state_btn_background"
+        android:onClick="actionButtonClicked"
+        android:text="Unlock"
+        android:textColor="?android:attr/textColorPrimaryInverse" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/launch_btn_enable_lock"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/launch_header_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:text="KidsPlace Secured, Please enter the pin to continue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:lines="1"
+                    android:inputType="text|textVisiblePassword"
+                    android:id="@+id/launch_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textSize="32sp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#10000000"
+                    />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/launch_pin_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/launch_header_view">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="8dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            style="@style/PinButtonStyle"
+                            android:text="1" />
+
+                        <Button
+                            style="@style/PinButtonStyle"
+                            android:text="2" />
+
+                        <Button
+                            style="@style/PinButtonStyle"
+                            android:text="3" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="8dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            style="@style/PinButtonStyle"
+                            android:text="4" />
+
+                        <Button
+                            style="@style/PinButtonStyle"
+                            android:text="5" />
+
+                        <Button
+                            style="@style/PinButtonStyle"
+                            android:text="6" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="8dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            style="@style/PinButtonStyle"
+                            android:text="7" />
+
+                        <Button
+                            style="@style/PinButtonStyle"
+                            android:text="8" />
+
+                        <Button
+                            style="@style/PinButtonStyle"
+                            android:text="9" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            style="@style/PinButtonStyle"
+                            android:src="@drawable/pin_btn_delete"
+                            android:tag="D" />
+
+                        <Button
+                            style="@style/PinButtonStyle"
+                            android:text="0" />
+
+                        <ImageButton
+                            style="@style/PinButtonStyle"
+                            android:src="@drawable/pin_btn_enter"
+                            android:tag="E" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

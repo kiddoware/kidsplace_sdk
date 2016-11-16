@@ -17,4 +17,46 @@
         android:onClick="startIntegration"
         />
 
+    <View
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#10000000"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        />
+
+    <TextView
+        android:text="Restrict Access to App Areas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:text="Default Dialog"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:onClick="pinDialog"
+        />
+
+    <View
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#10000000"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        />
+
+    <TextView
+        android:text="Restrict Access to App Areas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:text="Custom UI"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:onClick="pinRestricted"
+        />
+
 </LinearLayout>
